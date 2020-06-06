@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{% block title %} Title {% endblock %}</title>
+
+
+	<!-- Library -->
+	{% load static %}
+	<link rel="stylesheet" href="{% static '/lib/fontawesome-free/css/all.min.css' %}">
+	<link rel="stylesheet" href="{% static '/lib/icheck-bootstrap/icheck-bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static '/lib/summernote/summernote-bs4.css' %}">
+
+
+	<link rel="stylesheet" href="{% static '/css/main.min.css' %}">
+	<link rel="stylesheet" href="{% static '/css/custom.css' %}">
+</head>
+<body class="hold-transition sidebar-mini">
+
+
+
+<div class="wrapper">
+	<nav class="main-header navbar navbar-expand navbar-white navbar-light">
+		<ul class="navbar-nav">
+			<li class="nav-item">
+				<a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
+			</li>
+		</ul>
+
+
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item dropdown user-menu">
+				<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">
+					<img src="{% static '/img/avatar5.png' %}" class="user-image img-circle elevation-2">
+					<span class="d-none d-md-inline">Admin</span>
+				</a>
+
+				<ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+					<li class="user-header bg-purple">
+						<img src="{% static '/img/avatar5.png' %}" class="img-circle elevation-2" alt="User Image">
+						<p>
+							Admin - Teacher
+							<small>Member since Nov. 2019</small>
+						</p>
+					</li>
+
+					<li class="user-footer">
+						<a href="#" id="logout" class="btn bg-purple btn-flat float-right">Sign out</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+
+
+	<aside class="main-sidebar elevation-4 sidebar-light-purple">
+		<a href="/" class="brand-link navbar-light">
+			<img src="{% static '/img/product-hunt-brands.svg' %}" class="brand-image img-circle elevation-3"
+				 style="width: 34px;">
+			<span class="brand-text font-weight-light">Plagiarism Checker</span>
+		</a>
+
+		<div class="sidebar">
+			<nav class="mt-2">
+				<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview">
+					<li class="nav-item">
+						<a href="/" class="nav-link active">
+							<i class="fas fa-file-word nav-icon"></i>
+							<p>Insert Text</p>
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</aside>
+
+
+	<div class="content-wrapper">
+		<section class="content-header">
+			<div class="container-fluid">
+				<div class="mb-2">
+					<h3>
+						{% block head %}
+							This is head
+						{% endblock %}
+					</h3>
+				</div>
+			</div>
+		</section>
+
+
+		<section class="content">
+			<div class="card">
+				<div class="card-body">
+					{% block body %}
+						This is body
+					{% endblock %}
+				</div>
+			</div>
+		</section>
+	</div>
+
+
+	<footer class="main-footer d-flex justify-content-between flex-wrap">
+		<div><strong>Copyright &copy; 2019.</strong> All rights reserved.</div>
+
+		<div>Plagiarism Checker by <strong>Azizbek Iskandarov.</strong></div>
+	</footer>
+</div>
+
+
+
+
+<div class="loader_bx">
+	<div class="loader">
+		<div class="text">Loading</div>
+		<div class="dots">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<!-- Library -->
+<script src="{% static '/lib/jquery/jquery.min.js' %}"></script>
+<script src="{% static '/lib/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static '/lib/summernote/summernote-bs4.min.js' %}"></script>
+
+<script src="{% static '/js/main.min.js' %}"></script>
+
+
+<script>
+	$(function () {
+		try {
+			$('#textEditor').summernote();
+		} catch (err) {
+			console.warn(err.message);
+		}
+	});
+
+
+	$(document).on('submit', '#formSubmit', function (e) {
+		$('.loader_bx').addClass('active');
+	});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,217 @@
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-Black.ttf');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-BlackItalic.ttf');
+	font-weight: 900;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-Bold.ttf');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-BoldItalic.ttf');
+	font-weight: 700;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-SemiBold.ttf');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-SemiBoldItalic.ttf');
+	font-weight: 600;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-Regular.ttf');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-Italic.ttf');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-Light.ttf');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-LightItalic.ttf');
+	font-weight: 300;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-ExtraLight.ttf');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Source Sans Pro';
+	src: url('../font/SourceSansPro/SourceSansPro-ExtraLightItalic.ttf');
+	font-weight: 200;
+	font-style: italic;
+}
+
+
+.text_editor_bx .note-editable {
+	height: 300px;
+}
+
+
+.icheck-primary.purple > input:first-child:not(:checked):not(:disabled):hover + input[type=hidden] + label::before,
+.icheck-primary.purple > input:first-child:not(:checked):not(:disabled):hover + label::before {
+	border-color: #605ca8;
+}
+
+.icheck-primary.purple > input:first-child:checked + input[type=hidden] + label::before,
+.icheck-primary.purple > input:first-child:checked + label::before {
+	background-color: #605ca8;
+	border-color: #605ca8;
+}
+
+
+.loader_bx {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	opacity: 0;
+	visibility: hidden;
+	transition: .3s;
+	background: rgba(255, 255, 255, 0.9);
+}
+
+.loader_bx.active {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.loader {
+	display: flex;
+	line-height: 1;
+	font-size: 48px;
+	font-weight: 600;
+}
+
+.loader .dots {
+	display: flex;
+	position: relative;
+	top: 34px;
+	left: -10px;
+	width: 100px;
+	animation: dots 4s ease infinite 1s;
+}
+
+.loader .dots div {
+	position: relative;
+	width: 8px;
+	height: 8px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background-color: #212529;
+}
+
+.loader .dots div:nth-child(1) {
+	width: 0;
+	height: 0;
+	margin: 5px;
+	margin-right: 15px;
+	animation: show-dot 4s ease-out infinite 1s;
+}
+
+.loader .dots div:nth-child(4) {
+	background-color: transparent;
+	animation: dot-fall-left 4s linear infinite 1s;
+}
+
+.loader .dots div:nth-child(4):before {
+	content: '';
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	margin-right: 10px;
+	border-radius: 100%;
+	background-color: #212529;
+	animation: dot-fall-top 4s cubic-bezier(0.46, 0.02, 0.94, 0.54) infinite 1s;
+}
+
+@keyframes dots {
+	0% {
+		left: -10px;
+	}
+	20%, 100% {
+		left: 10px;
+	}
+}
+
+@keyframes show-dot {
+	0%, 20% {
+		width: 0px;
+		height: 0px;
+		margin: 5px;
+		margin-right: 15px;
+	}
+	30%, 100% {
+		width: 8px;
+		height: 8px;
+		margin: 0px;
+		margin-right: 10px;
+	}
+}
+
+@keyframes dot-fall-left {
+	0%, 5% {
+		left: 0px;
+	}
+	100% {
+		left: 200px;
+	}
+}
+
+@keyframes dot-fall-top {
+	0%, 5% {
+		top: 0px;
+	}
+	30%, 100% {
+		top: 50vh;
+	}
+}
+
+
+

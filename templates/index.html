@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+
+{% block head %} Insert the text into the editor {% endblock %}
+
+
+
+{% block body %}
+
+	{% if error_message %}
+		<div class="alert alert-warning alert-dismissible">
+			<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+
+			<h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+			Insufficient text to check for plagiarism. Please, insert more and longer text!
+		</div>
+	{% endif %}
+
+
+
+	<form id="formSubmit" action="{% url 'result' %}" method="post">
+		{% csrf_token %}
+
+		<div class="text_editor_bx mb-4">
+			<textarea id="textEditor" name="text"></textarea>
+		</div>
+
+		<div class="d-flex justify-content-end">
+			<button type="submit" class="btn bg-purple px-5">Submit</button>
+		</div>
+	</form>
+{% endblock %}
