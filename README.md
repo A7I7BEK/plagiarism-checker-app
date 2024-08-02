@@ -19,12 +19,9 @@ After you have installed all dependencies, type
 The server runs on `http://127.0.0.1:8000/` or 
 `http://localhost:8000/` if every thing works correctly
 
-If something doesn't work, don't hesitate to contact me:
-* **Telegram**: https://t.me/A7I7BEK 
-* **E-mail**: a7i7bek@gmail.com
 
 ## Attention!
-**The project is done using python v3+. If you have installed python v2 or lower, you cannot run the project. In order to run it, you need to uninstall the old version first and install the newer one (v3+). But if you have installed both versions, then you have to differentiate between command words like `python` and `pip`. Because it is a long process, I recommend you to contact with the author (contact details are shown above). However, if you really want to try yourself, you can refer to following links:**
+**The project is done using python v3+. If you have installed python v2 or lower, you cannot run the project. In order to run it, you need to uninstall the old version first and install the newer one (v3+). But if you have installed both versions, then you have to differentiate between command words like `python` and `pip`. You can refer to following links:**
 * https://stackoverflow.com/questions/39851566/using-pip-on-windows-installed-with-both-python-2-7-and-3-5
 * https://stackoverflow.com/questions/38938205/how-to-override-the-pip-command-to-python3-x-instead-of-python2-7
 * https://stackoverflow.com/a/48369923
